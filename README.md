@@ -6,7 +6,7 @@ A production-grade, highly available web application deployed on AWS using Terra
 
 ## 🏗️ Architecture Overview
 
-> 📌 **See `/docs/architecture-diagram.png` for the full architecture diagram.**
+![Architecture Diagram](docs/architecture-diagram.png)
 
 ```
 Internet
