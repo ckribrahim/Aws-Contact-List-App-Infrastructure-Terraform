@@ -79,7 +79,7 @@ resource "aws_security_group" "db-sg" {
 resource "aws_launch_template" "contactlist-lt" {
   name = "contactlist-lt"
   image_id = data.aws_ami.amazon-linux-2.id
-  instance_type = "t2.micro"
+  instance_type = "t4g.micro"
   key_name = var.key-name
   vpc_security_group_ids = [aws_security_group.ec2-sg.id]
   user_data = base64encode(data.template_file.contactlistdb.rendered)
@@ -122,7 +122,7 @@ resource "aws_db_instance" "db-server" {
   identifier = "contactlist-app-db"
   db_name = "contactlist"
   engine = "mysql"
-  engine_version = "8.0.35"
+  engine_version = "8.4.7"
   username = "bravosix"
   password = "cptgrey123"
   monitoring_interval = 0
